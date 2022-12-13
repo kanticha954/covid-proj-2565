@@ -5,6 +5,7 @@
  */
 package covidsoapclient;
 
+import java.util.Scanner;
 import services.CovidWeek;
 
 /**
@@ -17,8 +18,11 @@ public class CovidSoapClient {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        CovidWeek emp = findCaseById(1);
-        System.out.println("Func findCaseById = "+emp.getId());
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Input case Id =");
+        int id = sc.nextInt();
+        CovidWeek emp = findCaseById(id);
+        System.out.println("Func findCaseById = "+id);
         System.out.println("Case Id: "+emp.getId());
         System.out.println("Week: "+emp.getWeeknum());
         System.out.println("Year: "+emp.getYearnum());
@@ -42,9 +46,12 @@ public class CovidSoapClient {
         
         
         //findCasebyWeekNum
-        int weeknum = 30;
-        CovidWeek week = findCaseByWeek(weeknum);
+        System.out.println("Input Week number =");
+        int weeknum = sc.nextInt();
         System.out.println("Func findCaseByWeek = "+weeknum);
+        weeknum += 1;
+        //int weeknum = 30;
+        CovidWeek week = findCaseByWeek(weeknum);
         System.out.println("Case Id: "+week.getId());
         System.out.println("Week: "+week.getWeeknum());
         System.out.println("Year: "+week.getYearnum());
@@ -81,6 +88,8 @@ public class CovidSoapClient {
         services.CovidWeekWebService port = service.getCovidWeekWebServicePort();
         return port.findCaseByWeek(weeknum);
     }
+
+   
     
     
     
