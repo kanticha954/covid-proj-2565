@@ -27,9 +27,6 @@ public class CovidWeekWebService {
     @Resource
     private javax.transaction.UserTransaction utx;
 
-    /**
-     * Web service operation
-     */
     //byID
     @WebMethod(operationName = "findCaseById")
     public CovidWeek findCaseById(@WebParam(name = "id") int id) {
@@ -43,7 +40,7 @@ public class CovidWeekWebService {
         CovidWeek emp = em.find(CovidWeek.class, weeknum);
         return emp;
     }
-    
+
     private void persist(Object object) {
         try {
             utx.begin();
