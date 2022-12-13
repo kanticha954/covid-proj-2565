@@ -72,9 +72,7 @@ public class CovidSoapClient {
         System.out.println("Death NewDiff: "+week.getDeathNewDiff());
         System.out.println("Update Date: "+week.getUpdateDate());
         System.out.println("-------------------------------");
-        
-        
-        
+         
     }
 
     private static CovidWeek findCaseById(int id) {
