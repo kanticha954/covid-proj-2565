@@ -2,4 +2,6 @@
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
     <system systemId="http://localhost:8080/CovidSoapService/CovidWeekWebService?WSDL" uri="wsdl/localhost_8080/CovidSoapService/CovidWeekWebService.wsdl"/>
     <system systemId="http://localhost:8080/CovidSoapService/CovidWeekWebService?xsd=1" uri="wsdl/localhost_8080/CovidSoapService/CovidWeekWebService.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/CovidSoapService/CovidService?WSDL" uri="wsdl/localhost_8080/CovidSoapService/CovidService.wsdl"/>
+    <system systemId="http://localhost:8080/CovidSoapService/CovidService?xsd=1" uri="wsdl/localhost_8080/CovidSoapService/CovidService.xsd_1.xsd"/>
 </catalog>

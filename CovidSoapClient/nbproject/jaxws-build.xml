@@ -33,5 +33,22 @@
         <delete dir="${build.generated.dir}/jax-wsCache/CovidWeekWebService"/>
         <delete dir="${build.generated.sources.dir}/jax-ws/services"/>
     </target>
-    <target name="wsimport-client-generate" depends="wsimport-client-CovidWeekWebService"/>
+    <target name="wsimport-client-CovidService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/CovidService"/>
+        <property name="wsdl-CovidService" location="xml-resources/web-service-references/CovidService/wsdl/localhost_8080/CovidSoapService/CovidService.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/CovidService" destdir="${build.generated.dir}/jax-wsCache/CovidService" wsdl="${wsdl-CovidService}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/CovidSoapService/CovidService?WSDL" xnocompile="true" xendorsed="true" package="covidAll">
+            <depends file="${wsdl-CovidService}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/CovidService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/CovidService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-CovidService" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/CovidService"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/covidAll"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-CovidWeekWebService, wsimport-client-CovidService"/>
 </project>
