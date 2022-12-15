@@ -16,8 +16,8 @@ import covidAll.Covid;
 public class CovidSoapClient {
 
     public static void main(String[] args) {
-        //findCasebyId
-        Scanner sc = new Scanner(System.in);
+       //findCasebyId
+       Scanner sc = new Scanner(System.in);
         System.out.println("Input case ID =");
         int id = sc.nextInt();
         if(id > 50){
@@ -51,7 +51,7 @@ public class CovidSoapClient {
         //findCasebyWeekNum
         System.out.println("Input Week number =");
         int weeknum = sc.nextInt();
-        if(weeknum > 50){
+        if(weeknum > 52){
             System.out.println("Non Data");
         } else {
             System.out.println("Func findCaseByWeek = "+weeknum);
@@ -81,23 +81,23 @@ public class CovidSoapClient {
         }
         
         
-        //findCovidbyId show province per week
-        System.out.println("Input Case ID Between 1 - 3871 =");
-        int id_cv = sc.nextInt();
-        //id = 1;
-        System.out.println("Func findCovidById = "+id_cv);
-        Covid cv = findCovidById(id_cv);
-        System.out.println("Case Id: "+cv.getId());
-        System.out.println("Week: "+cv.getWeeknum());
-        System.out.println("Year: "+cv.getYearnum());
-        System.out.println("New Case: "+cv.getNewCase());
-        System.out.println("Total Case: "+cv.getTotalCase());
-        System.out.println("New case excludeabroad: "+cv.getNewCaseExcludeabroad());
-        System.out.println("Total Case Excludeabroad: "+cv.getTotalCaseExcludeabroad());
-        System.out.println("New Death: "+cv.getNewDeath());
-        System.out.println("Total Death: "+cv.getTotalDeath());
-        System.out.println("Update Date: "+cv.getUpdateDate());
-        System.out.println("-------------------------------");
+//        //findCovidbyId show province per week
+//        System.out.println("Input Case ID Between 1 - 3871 =");
+//        int id_cv = sc.nextInt();
+//        //id = 1;
+//        System.out.println("Func findCovidById = "+id_cv);
+//        Covid cv = findCovidById(id_cv);
+//        System.out.println("Case Id: "+cv.getId());
+//        System.out.println("Week: "+cv.getWeeknum());
+//        System.out.println("Year: "+cv.getYearnum());
+//        System.out.println("New Case: "+cv.getNewCase());
+//        System.out.println("Total Case: "+cv.getTotalCase());
+//        System.out.println("New case excludeabroad: "+cv.getNewCaseExcludeabroad());
+//        System.out.println("Total Case Excludeabroad: "+cv.getTotalCaseExcludeabroad());
+//        System.out.println("New Death: "+cv.getNewDeath());
+//        System.out.println("Total Death: "+cv.getTotalDeath());
+//        System.out.println("Update Date: "+cv.getUpdateDate());
+//        System.out.println("-------------------------------");
         
          
     }

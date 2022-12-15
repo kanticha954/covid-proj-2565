@@ -1,3 +1,7 @@
+2. รายงานสถานการณ์ COVID-19 ประจำสัปดาห์แยกตามรายจังหวัด
+-------https://covid19.ddc.moph.go.th/api/Cases/today-cases-by-provinces
+
+
 CREATE TABLE COVID(
    id                       INTEGER  NOT NULL PRIMARY KEY 
   ,yearnum                     INTEGER  NOT NULL
