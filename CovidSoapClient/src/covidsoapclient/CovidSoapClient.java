@@ -81,23 +81,23 @@ public class CovidSoapClient {
         }
         
         
-//        //findCovidbyId show province per week
-//        System.out.println("Input Case ID Between 1 - 3871 =");
-//        int id_cv = sc.nextInt();
-//        //id = 1;
-//        System.out.println("Func findCovidById = "+id_cv);
-//        Covid cv = findCovidById(id_cv);
-//        System.out.println("Case Id: "+cv.getId());
-//        System.out.println("Week: "+cv.getWeeknum());
-//        System.out.println("Year: "+cv.getYearnum());
-//        System.out.println("New Case: "+cv.getNewCase());
-//        System.out.println("Total Case: "+cv.getTotalCase());
-//        System.out.println("New case excludeabroad: "+cv.getNewCaseExcludeabroad());
-//        System.out.println("Total Case Excludeabroad: "+cv.getTotalCaseExcludeabroad());
-//        System.out.println("New Death: "+cv.getNewDeath());
-//        System.out.println("Total Death: "+cv.getTotalDeath());
-//        System.out.println("Update Date: "+cv.getUpdateDate());
-//        System.out.println("-------------------------------");
+        //findCovidbyId show province per week
+        System.out.println("Input Case ID Between 1 - 3871 =");
+        int id_cv = sc.nextInt();
+        //id = 1;
+        System.out.println("Func findCovidById = "+id_cv);
+        Covid cv = findCovidById(id_cv);
+        System.out.println("Case Id: "+cv.getId());
+        System.out.println("Week: "+cv.getWeeknum());
+        System.out.println("Year: "+cv.getYearnum());
+        System.out.println("New Case: "+cv.getNewCase());
+        System.out.println("Total Case: "+cv.getTotalCase());
+        System.out.println("New case excludeabroad: "+cv.getNewCaseExcludeabroad());
+        System.out.println("Total Case Excludeabroad: "+cv.getTotalCaseExcludeabroad());
+        System.out.println("New Death: "+cv.getNewDeath());
+        System.out.println("Total Death: "+cv.getTotalDeath());
+        System.out.println("Update Date: "+cv.getUpdateDate());
+        System.out.println("-------------------------------");
         
          
     }
